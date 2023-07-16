@@ -1,0 +1,26 @@
+{
+  "name": "Jenny hair & wig",
+  "short_name": "Jenny hair & wig",
+  "description": "A progressive web app built with Next.js",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#004740",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "prefer_related_applications": false
+}
