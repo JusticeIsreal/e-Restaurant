@@ -330,7 +330,7 @@ $txt-light-blue: #cfe8ff;
           height: 380px;
         }
         @include responsive(desktop) {
-          height: 620px;
+          height: 650px;
         }
         .img {
           width: 100%;
@@ -341,7 +341,7 @@ $txt-light-blue: #cfe8ff;
         height: 380px;
       }
       @include responsive(desktop) {
-        height: 620px;
+        height: 650px;
       }
     }
   }
@@ -509,24 +509,29 @@ $txt-light-blue: #cfe8ff;
 
       @include responsive(bigphone) {
         @include flexDisplay(space-between, center, row);
-        margin-top: 30px;
+        // margin-top: 30px;
       }
 
       .products {
         @include flexDisplay(space-evenly, center, column);
-        width: 45%;
-        padding: 5px 5px 0 5px;
+        width: 46%;
+        padding: 5px 5px 5px 5px;
         margin: 10px 5px;
         border-radius: 5px;
         background: white;
         overflow: hidden;
-        max-width: 180px;
+        // max-width: 180px;
         border-right: 1px solid #f5f3f3;
         box-shadow: -1px -1px 2px rgba(128, 128, 128, 0.368);
         // border: 2px solid red;
         @include responsive(bigphone) {
-          width: 20%;
+          // border: 2px solid red;
+          width: 23%;
           max-width: 200px;
+        }
+        @include responsive(tablet) {
+          width: 23%;
+          max-width: 240px;
         }
 
         .product-name {
@@ -535,7 +540,7 @@ $txt-light-blue: #cfe8ff;
           // text-align: center;
           font-size: 15px;
           // line-height: 2;
-          color: $txt-blue;
+          color: $bg-dark-gray;
           // margin-top: -1px;
           width: 100%;
           overflow: hidden;
@@ -616,28 +621,34 @@ $txt-light-blue: #cfe8ff;
         .price {
           @include flexDisplay(space-between, center, row);
           width: 100%;
-
-          color: $txt-blue;
-          // height: 30px;
-          // margin-top: 5px;
+          color: $bg-dark-gray;
           font-size: 15px;
 
           .product-price {
-            // border: 2px solid red;
             text-align: center;
-            // line-height: 1.5;
             margin-top: 5px;
-            color: $txt-blue;
+            color: $bg-dark-gray;
           }
 
           .product-oldprice {
-            text-align: center;
+            @include flexDisplay(center, center, row);
+
             // line-height: 1.5;
             margin-top: 5px;
-            font-size: 12px;
-            color: $txt-blue;
-            font-style: italic;
-            text-decoration: line-through;
+            border-radius: 50px;
+            width: 30px;
+            height: 30px;
+            background: $txt-blue;
+            padding: 5px;
+
+            @include responsive(bigphone) {
+              width: 40px;
+              height: 40px;
+            }
+            .icon {
+              font-size: 22px;
+              color: $bg-gray;
+            }
           }
         }
 
@@ -1118,36 +1129,35 @@ $txt-light-blue: #cfe8ff;
     }
     .top-con {
       background: $bg-light-yellow;
+
       padding: 20px 10px;
       margin: 20px;
-      // width: 90%;
-      // height: 400px;
+      width: 90%;
+      height: 320px;
 
       @include responsive(bigphone) {
         @include flexDisplay(center, flex-start, column);
         margin: 20px;
+        width: 350px;
       }
       .img-con {
         width: 100%;
         margin: 0 auto;
+        @include flexDisplay(center, center, column);
 
         img {
-          width: 100%;
+          width: 300px;
         }
-      }
-      p {
-        font-size: 15px;
-        margin-top: 20px;
       }
 
       .icon-con {
         width: 100%;
         // padding: 5px;
-        margin-top: 20px;
+        // margin-top: 20px;
         @include flexDisplay(space-around, center, row);
 
         .icon {
-          color: $bg-light;
+          color: $bg-gray;
           background: $txt-blue;
           width: 35px;
           height: 35px;
@@ -1162,34 +1172,38 @@ $txt-light-blue: #cfe8ff;
     }
 
     .lower-con {
+      // border: 2px solid red;
       width: 90%;
       margin-top: 20px;
       @include flexDisplay(space-around, flex-start, column);
       @include responsive(bigphone) {
+        margin-bottom: auto;
         @include flexDisplay(space-around, center, row);
       }
       .quick-link {
         margin-bottom: auto;
+        // border: 2px solid red;
         @include flexDisplay(center, flex-start, column);
         @include responsive(bigphone) {
           width: 30%;
         }
         h3 {
-          border-bottom: 2px solid $bg-light;
+          border-bottom: 2px solid $bg-gray;
           padding-bottom: 10px;
           margin-bottom: 10px;
           margin-top: 30px;
-          color: $bg-light;
+          color: white;
           @include responsive(bigphone) {
             font-size: 15px;
+            margin-top: 0;
           }
         }
         .links {
-          color: $bg-light;
+          color: white;
           margin-bottom: 10px;
 
           a {
-            color: $bg-light;
+            color: white;
           }
         }
       }
@@ -1201,7 +1215,7 @@ $txt-light-blue: #cfe8ff;
     // background: $bg-blue;
     p {
       text-align: center;
-      color: $bg-light;
+      color: white;
     }
   }
 }

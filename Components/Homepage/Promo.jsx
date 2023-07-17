@@ -25,7 +25,7 @@ function Promo() {
           <h3>Deal of the day</h3>
           <h1>Up to 40% discount</h1>
           <Link href="/products" className="btn">
-            Shop now
+            Order Now
           </Link>
         </div>
         <div className="fade-con">

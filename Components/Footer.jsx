@@ -52,7 +52,7 @@ function Footer() {
         <div className="top-con">
           <div className="img-con">
             <img
-              src="https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg"
+              src="https://res.cloudinary.com/dk3iqiy2e/image/upload/v1685825962/WhatsApp_Image_2023-05-30_at_12.36.37_AM-removebg-preview_kxnfud.png"
               alt="img"
             />
           </div>
@@ -159,7 +159,7 @@ function Footer() {
       </div>
       <div className="copyright">
         <p>
-          Copyright © Jenny Hair & Wig {new Date().getFullYear()}. All Rights
+          Copyright © Jenny's kitchen {new Date().getFullYear()}. All Rights
           Reserved.
         </p>
       </div>
