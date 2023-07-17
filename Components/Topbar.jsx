@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import { logOUT } from "../Services/functions";
 import Cookies from "js-cookie";
 // ICONS
-import { SiCoinmarketcap } from "react-icons/si";
+import { BiDish } from "react-icons/bi";
 import { FaCartArrowDown } from "react-icons/fa";
-import { BsShop, BsWhatsapp } from "react-icons/bs";
+import { BsShop, BsTelephoneForward, BsWhatsapp } from "react-icons/bs";
 import { FiGrid, FiTruck } from "react-icons/fi";
 import { GrUserAdmin } from "react-icons/gr";
 import { getSessionUser } from "../Services/functions";
@@ -79,7 +79,7 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
             {/* <SiCoinmarketcap className="icon" /> */}
             <img
               className="icon-img"
-              src="https://res.cloudinary.com/dnfa3ujys/image/upload/v1685978061/WhatsApp_Image_2023-06-05_at_3.43.15_PM-removebg-preview_dkvpea.png"
+              src="https://res.cloudinary.com/dk3iqiy2e/image/upload/v1685825962/WhatsApp_Image_2023-05-30_at_12.36.37_AM-removebg-preview_kxnfud.png"
               alt="img"
             />
           </Link>
@@ -87,9 +87,13 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
             {name && name.split(" ")[0]}
           </p>
         </div>
-
+        {/* https://res.cloudinary.com/isreal/image/upload/v1689556398/resturant_banner_2_copy_cze2uq.jpg */}
         {/* cart and user icon */}
         <div className="topbar-top-con-right">
+          <div className="number">
+            <BsTelephoneForward />
+            <p>+234 810 401 5180</p>
+          </div>
           <div className="cart-icon-con">
             <Link href="/cart">
               <FaCartArrowDown className="icon" />
@@ -115,8 +119,9 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
                 {active == 1 ? <div className="nav-active"></div> : ""}
                 <span>
                   <BsShop className="menu-icon" />
+                  {/* <p>Home</p> */}
                 </span>
-                <p> Home</p>
+                <p>Home</p>
               </li>
             </Link>
             <Link href="/products">
@@ -124,11 +129,16 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
                 className={`${active === 2 ? "listactive" : ""}`}
                 onClick={() => setActive(2)}
               >
-                {active == 2 ? <div className="nav-active"></div> : ""}
+                {active == 2 ? (
+                  <div className="nav-active nav-active-dish"></div>
+                ) : (
+                  ""
+                )}
                 <span>
-                  <FiGrid className="menu-icon" />
+                  <BiDish className="menu-icon dish" />
+                  {/* <p>Delicacies</p> */}
                 </span>
-                <p> Products</p>
+                <p>Delicacies</p>
               </li>
             </Link>
             <Link href="/orders">
@@ -139,12 +149,13 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
                 {active == 3 ? <div className="nav-active"></div> : ""}
                 <span>
                   <FiTruck className="menu-icon" />
+                  {/* <p> Order</p> */}
                 </span>
                 <p> Order</p>
               </li>
             </Link>
 
-            <a
+            {/* <a
               href="https://wa.me/447404699950?text=Hello, I am a customer on your platfor Jenny's Hair & Wig and I need your support."
               target="_blank"
             >
@@ -154,7 +165,7 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
                 </span>
                 Support
               </li>
-            </a>
+            </a> */}
             {session?.user?.position === "admin" ||
             session?.user?.position === "staff" ? (
               <Link href="/Adminpage/AdminDashboard">

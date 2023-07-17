@@ -30,7 +30,7 @@ $font-light: #666;
 $bg-gray: #eeeeee;
 $bg-dark-gray: #444;
 $bg-dark: #342e37;
-$txt-blue: #113261;
+$txt-blue: #f59918;
 $txt-light-blue: #cfe8ff;
 
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
@@ -98,20 +98,27 @@ $txt-light-blue: #cfe8ff;
   position: fixed;
   top: 0;
   left: 0;
-  background: whitesmoke;
+  // background: whitesmoke;
   box-shadow: 5px 5px 10px $bg-gray;
+  // border: 2px solid red;
 
   .topbar-top-con {
     @include flexDisplay(space-between, center, row);
-    width: 100vw;
-    height: 50px;
+    width: 100%;
+    // height: 50px;
     padding: 5px 10px;
     position: sticky;
     position: fixed;
     top: 0;
     left: 0;
-    background: $txt-blue;
+    // background: $txt-blue;
+    background: white;
     // border: 1px solid red;
+
+    @include responsive(bigphone) {
+      // border: 1px solid red;
+      padding: 10px 20px;
+    }
 
     .topbar-top-con-left {
       @include flexDisplay(space-between, center, row);
@@ -122,21 +129,38 @@ $txt-light-blue: #cfe8ff;
     }
     .topbar-top-con-right {
       // border: 2px solid red;
+      .number {
+        @include flexDisplay(space-between, center, row);
+        background: $txt-blue;
+        padding: 5px 10px;
+        color: white;
+        margin-right: 30px;
+        border-radius: 10px;
+        display: none;
 
+        p {
+          // color: $bg-dark-gray;
+          margin-left: 10px;
+        }
+
+        @include responsive(bigphone) {
+          display: flex;
+        }
+      }
       @include flexDisplay(space-between, center, row);
       .cart-icon-con {
         // border: 1px solid red;
         @include flexDisplay(space-between, center, row);
         position: relative;
         .icon {
-          color: $bg-light;
+          color: $txt-blue;
         }
         sup {
           padding-left: 3px;
           margin-bottom: 10px;
           font-weight: bolder;
           font-size: 15px;
-          color: $bg-light;
+          color: $txt-blue;
           // border: 1px solid red;
         }
       }
@@ -162,18 +186,23 @@ $txt-light-blue: #cfe8ff;
       width: 100%;
     }
     @include responsive(bigphone) {
-      // border: 1px solid red;
+      background: rgba(255, 255, 255, 0);
       padding-bottom: 0;
       position: relative;
-      height: 30px;
-      margin-top: 50px;
+      margin-right: auto;
+      // height: 30px;
+      width: auto;
+      // margin-bottom: 0;
     }
 
     nav {
       // border: 1px solid red;
-      width: 100%;
+      margin: 0 auto;
+      width: 95%;
       @include flexDisplay(space-between, center, row);
-
+      @include responsive(bigphone) {
+        width: 100%;
+      }
       ul {
         // border: 1px solid red;
         width: 100%;
@@ -185,14 +214,14 @@ $txt-light-blue: #cfe8ff;
           height: 100%;
           width: 500px;
           padding: 0;
-          @include flexDisplay(space-between, center, row);
+          @include flexDisplay(center, center, row);
         }
         li {
           @include flexDisplay(space-between, center, column);
           padding: 0px 15px;
           height: 100%;
           font-size: 10px;
-          color: $bg-light;
+          color: $bg-dark;
           cursor: pointer;
           // border: 1px solid red;
           @include responsive(phone) {
@@ -217,10 +246,18 @@ $txt-light-blue: #cfe8ff;
               display: none;
             }
           }
-
+          .nav-active-dish {
+            width: 50vw;
+            height: 30vw;
+          }
           p {
             z-index: 30;
+            display: none;
+            @include responsive(bigphone) {
+              display: block;
+            }
           }
+
           span {
             @include flexDisplay(space-between, center, column);
             font-size: 33px;
@@ -230,22 +267,35 @@ $txt-light-blue: #cfe8ff;
             @include responsive(phone) {
               font-size: 25px;
             }
-            .menu-icon {
-              &:hover {
-                transform: scale(0.9);
+
+            p {
+              display: block;
+              font-size: 15px;
+
+              @include responsive(bigphone) {
+                display: none;
               }
             }
-
+            .menu-icon {
+              transform: scale(1.2);
+            }
+            .dish {
+              // border: 2px solid red;
+              font-size: 40px;
+              padding: 0 !important;
+            }
             @include responsive(bigphone) {
               display: none;
             }
           }
         }
+        .listactive {
+          background: $txt-blue;
+          color: white;
+          border-radius: 10px;
 
-        @include responsive(bigphone) {
-          .listactive {
-            background: white;
-            color: $txt-blue;
+          .menu-icon {
+            transform: scale(1.5);
           }
         }
       }
@@ -305,6 +355,7 @@ $txt-light-blue: #cfe8ff;
   @include responsive(tablet) {
     margin-top: 30px;
   }
+
   .new-arrivals-con {
     @include flexDisplay(space-between, center, column);
 
