@@ -159,18 +159,22 @@ const Homepage = () => {
           <div className="category-con">{/* <h1>CATEGORIES</h1> */}</div>
           <Advert />
           {/* NEW ARRIVALS */}
-          <NewArrivals />
-          {/* <Advert /> */}
-          {/* MAIN PRODUCT */}
-          <Products products={products} addToCar={addToCar} />
-          <Advert />
-          {/* SUBSCRIBE */}
-          {/* <NewsLetter /> */}
-          {/* PROMO */}
-          <Promo />
-          <Advantages />
-          {/* REVIEWS */}
-          <Review />
+          <div style={{ maxWidth: "1700px", margin: "0 auto" }}>
+            {" "}
+            <NewArrivals />
+            {/* <Advert /> */}
+            {/* MAIN PRODUCT */}
+            <Products products={products} addToCar={addToCar} />
+            <Advert />
+            {/* SUBSCRIBE */}
+            {/* <NewsLetter /> */}
+            {/* PROMO */}
+            <Promo />
+            <Advantages />
+            {/* REVIEWS */}
+            <Review />
+          </div>
+
           {/* <Advert /> */}
           {/* FOOTER */}
           <Footer />

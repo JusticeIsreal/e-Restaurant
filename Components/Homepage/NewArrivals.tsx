@@ -13,7 +13,7 @@ import {
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import Image from "next/image";
 
-function NewArrivals() {
+const NewArrivals: React.ReactNode = () => {
   const [trendingProducts, setTrendingProducts] = useState<any[]>([]);
   useEffect(() => {
     return onSnapshot(
@@ -30,7 +30,9 @@ function NewArrivals() {
     <div className="new-arrivals-main-con">
       <div className="new-arrivals-con">
         {/* heading */}
-        <h1>TRENDING</h1>
+        <h1>
+          Best <p>Selling</p>
+        </h1>
         {/* product container */}
 
         <div className="new-products-con">
@@ -48,7 +50,7 @@ function NewArrivals() {
       </div>
     </div>
   );
-}
+};
 
 export default NewArrivals;
 

@@ -28,7 +28,19 @@ function Banner() {
         {/* SIAPLAYING PRODUCTS IMAGES*/}
         <div className="carousel-main-con">
           <div className="carousel-con">
-            <Fade arrows={false}>
+            <div className="carousel-items-con">
+              <Image
+                src="https://res.cloudinary.com/isreal/image/upload/v1689556398/resturant_banner_2_copy_cze2uq.jpg"
+                alt="img"
+                className="img"
+                fill
+                sizes="100vw"
+                style={{
+                  right: "0",
+                }}
+              />
+            </div>
+            {/* <Fade arrows={false}>
               {bannerDetails?.map((item, index) => (
                 <div className="carousel-items-con" key={item.id}>
                   <Image
@@ -43,7 +55,7 @@ function Banner() {
                   />
                 </div>
               ))}
-            </Fade>
+            </Fade> */}
           </div>
         </div>
       </div>

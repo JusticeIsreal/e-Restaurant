@@ -72,6 +72,7 @@
 @media only screen and (min-width: 768px) {
   .topbar-main-con .topbar-top-con {
     padding: 10px 20px;
+    height: 60px;
   }
 }
 .topbar-main-con .topbar-top-con .topbar-top-con-left {
@@ -272,31 +273,34 @@
   transform: scale(1.5);
 }
 
+.banner-main-con {
+  margin-top: 12px;
+}
 @media only screen and (min-width: 768px) {
   .banner-main-con {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
 .banner-main-con .carousel-main-con {
   position: relative;
 }
 .banner-main-con .carousel-main-con .carousel-con {
-  height: 190px;
+  height: 220px;
 }
 .banner-main-con .carousel-main-con .carousel-con .carousel-items-con {
-  height: 200px;
+  height: 220px;
   width: 100%;
   position: absolute;
   top: 0;
 }
 @media only screen and (min-width: 768px) {
   .banner-main-con .carousel-main-con .carousel-con .carousel-items-con {
-    height: 300px;
+    height: 380px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .banner-main-con .carousel-main-con .carousel-con .carousel-items-con {
-    height: 500px;
+    height: 620px;
   }
 }
 .banner-main-con .carousel-main-con .carousel-con .carousel-items-con .img {
@@ -304,17 +308,17 @@
 }
 @media only screen and (min-width: 768px) {
   .banner-main-con .carousel-main-con .carousel-con {
-    height: 300px;
+    height: 380px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .banner-main-con .carousel-main-con .carousel-con {
-    height: 500px;
+    height: 620px;
   }
 }
 
 .new-arrivals-main-con {
-  width: 100vw;
+  width: 100%;
   margin-top: 40px;
   overflow-x: hidden;
 }
@@ -331,8 +335,23 @@
 }
 .new-arrivals-main-con .new-arrivals-con h1 {
   color: #f59918;
-  margin-left: 5px;
+  margin-right: auto;
   font-size: 30px;
+  padding: 5px;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.new-arrivals-main-con .new-arrivals-con h1 p {
+  margin-left: 10px;
+  color: #f59918;
+}
+@media only screen and (min-width: 768px) {
+  .new-arrivals-main-con .new-arrivals-con h1 {
+    margin-top: 50px;
+  }
 }
 @media only screen and (min-width: 1023px) {
   .new-arrivals-main-con .new-arrivals-con h1 {
@@ -426,15 +445,30 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1500px;
   margin: 0 auto;
   padding-bottom: 10px;
 }
 .product-session-con .product-main-con h1 {
   color: #f59918;
-  margin-left: 5px;
-  margin-top: 20px;
+  margin-right: auto;
+  margin-top: 30px;
   font-size: 30px;
+  padding: 5px;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-items: baseline;
+}
+.product-session-con .product-main-con h1 p {
+  margin-left: 10px;
+  color: #f59918;
+}
+@media only screen and (min-width: 768px) {
+  .product-session-con .product-main-con h1 {
+    margin-top: 50px;
+  }
 }
 @media only screen and (min-width: 1023px) {
   .product-session-con .product-main-con h1 {
@@ -452,13 +486,12 @@
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 30px;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .product-session-con .product-main-con .products-con {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     margin-top: 30px;
@@ -808,7 +841,7 @@
   padding: 0 5px;
   margin: 0 auto;
   margin: 130px 0 0 0;
-  width: 100vw;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .review-main-con {
@@ -921,7 +954,7 @@
   margin: 0 auto;
   cursor: pointer;
   height: 80px;
-  width: 100vw;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .ad-con .ad-img img {
@@ -933,6 +966,7 @@
   text-align: center;
   color: #f59918;
   font-size: 15px;
+  text-transform: lowercase;
 }
 
 .modal-main-con {

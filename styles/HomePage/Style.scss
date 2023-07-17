@@ -118,6 +118,7 @@ $txt-light-blue: #cfe8ff;
     @include responsive(bigphone) {
       // border: 1px solid red;
       padding: 10px 20px;
+      height: 60px;
     }
 
     .topbar-top-con-left {
@@ -306,9 +307,9 @@ $txt-light-blue: #cfe8ff;
 // BANNER STYLE
 .banner-main-con {
   // border: 2px solid red;
-
+  margin-top: 12px;
   @include responsive(bigphone) {
-    margin-top: 80px;
+    margin-top: 60px;
   }
   .carousel-main-con {
     // border: 2px solid rgb(0, 64, 255);
@@ -317,30 +318,30 @@ $txt-light-blue: #cfe8ff;
 
     .carousel-con {
       // border: 2px solid rgb(0, 255, 34);
-      height: 190px;
+      height: 220px;
       .carousel-items-con {
-        height: 200px;
+        height: 220px;
         width: 100%;
         position: absolute;
         top: 0;
         // border: 2px solid red;
 
         @include responsive(bigphone) {
-          height: 300px;
+          height: 380px;
         }
         @include responsive(desktop) {
-          height: 500px;
+          height: 620px;
         }
         .img {
           width: 100%;
-          // object-fit: contain;
+          // object-fit: cover;
         }
       }
       @include responsive(bigphone) {
-        height: 300px;
+        height: 380px;
       }
       @include responsive(desktop) {
-        height: 500px;
+        height: 620px;
       }
     }
   }
@@ -348,7 +349,7 @@ $txt-light-blue: #cfe8ff;
 
 // NEW PRODUCTS
 .new-arrivals-main-con {
-  width: 100vw;
+  width: 100%;
   margin-top: 40px;
   overflow-x: hidden;
   // border: 2px solid red;
@@ -361,9 +362,19 @@ $txt-light-blue: #cfe8ff;
 
     h1 {
       color: $txt-blue;
-      margin-left: 5px;
+      margin-right: auto;
       font-size: 30px;
-
+      // border: 2px solid red;
+      padding: 5px;
+      color: $bg-dark-gray;
+      @include flexDisplay(space-between, center, row);
+      p {
+        margin-left: 10px;
+        color: $txt-blue;
+      }
+      @include responsive(bigphone) {
+        margin-top: 50px;
+      }
       @include responsive(tablet) {
         font-size: 50px;
       }
@@ -459,14 +470,26 @@ $txt-light-blue: #cfe8ff;
   .product-main-con {
     @include flexDisplay(space-between, center, column);
     width: 100%;
-    max-width: 1500px;
+    // max-width: 1500px;
     margin: 0 auto;
+
     h1 {
       color: $txt-blue;
-      margin-left: 5px;
-      margin-top: 20px;
+      margin-right: auto;
+      margin-top: 30px;
       font-size: 30px;
-
+      // border: 2px solid red;
+      padding: 5px;
+      color: $bg-dark-gray;
+      @include flexDisplay(space-between, center, row);
+      align-items: baseline;
+      p {
+        margin-left: 10px;
+        color: $txt-blue;
+      }
+      @include responsive(bigphone) {
+        margin-top: 50px;
+      }
       @include responsive(tablet) {
         font-size: 50px;
       }
@@ -480,12 +503,12 @@ $txt-light-blue: #cfe8ff;
     .products-con {
       @include flexDisplay(space-evenly, flex-start, row);
       flex-wrap: wrap;
-      margin-top: 30px;
+      // margin-top: 30px;
       width: 100%;
       // border: 2px solid red;
 
       @include responsive(bigphone) {
-        @include flexDisplay(center, center, row);
+        @include flexDisplay(space-between, center, row);
         margin-top: 30px;
       }
 
@@ -857,7 +880,7 @@ $txt-light-blue: #cfe8ff;
   padding: 0 5px;
   margin: 0 auto;
   margin: 130px 0 0 0;
-  width: 100vw;
+  width: 100%;
 
   @include responsive(bigphone) {
     height: 350px;
@@ -970,7 +993,7 @@ $txt-light-blue: #cfe8ff;
       cursor: pointer;
 
       height: 80px;
-      width: 100vw;
+      width: 100%;
 
       @include responsive(bigphone) {
         height: 100px;
@@ -982,6 +1005,7 @@ $txt-light-blue: #cfe8ff;
       text-align: center;
       color: $txt-blue;
       font-size: 15px;
+      text-transform: lowercase;
     }
   }
 }

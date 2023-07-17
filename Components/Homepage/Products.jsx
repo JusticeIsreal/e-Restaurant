@@ -13,6 +13,7 @@ import { db } from "../../Firebase";
 import { useEffect, useState } from "react";
 import { addToCart, getSessionUser } from "../../Services/functions";
 import { jgi } from "../Topbar";
+import { FaCartArrowDown } from "react-icons/fa";
 
 function Products({ products, addToCar }) {
   const halfLength = Math.ceil(products.length / 2);
@@ -21,7 +22,9 @@ function Products({ products, addToCar }) {
   return (
     <div className="product-session-con">
       <div className="product-main-con">
-        <h1>PRODUCTS</h1>
+        <h1>
+          Avaliable <p>Dish</p>
+        </h1>
 
         {/* PRODUCTS ARRAY */}
 
@@ -102,13 +105,13 @@ function Product({
         <p className="product-price">
           £ {Number(productprice).toLocaleString()}
         </p>
-        <p className="product-oldprice">
-          {productoldprice && "£ " + Number(productoldprice).toLocaleString()}
+        <p className="product-oldprice" onClick={(e) => addToCar(e, id)}>
+          <FaCartArrowDown className="icon" />
         </p>
       </div>
-      <button className="addto-cart" onClick={(e) => addToCar(e, id)}>
+      {/* <button className="addto-cart" onClick={(e) => addToCar(e, id)}>
         Add to cart
-      </button>
+      </button> */}
     </div>
   );
 }
