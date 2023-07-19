@@ -1002,7 +1002,7 @@ $txt-light-blue: #cfe8ff;
     // border: 2px solid red;
     // height: 50px;
     a {
-      width: 100%;
+      width: 90%;
       @include responsive(bigphone) {
         height: 100px;
         width: 50vw;

@@ -971,7 +971,7 @@
   flex-direction: row;
 }
 .ad-con .ad-img a {
-  width: 100%;
+  width: 90%;
 }
 @media only screen and (min-width: 768px) {
   .ad-con .ad-img a {
