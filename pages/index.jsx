@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
-          href="https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg"
+          href="https://res.cloudinary.com/isreal/image/upload/v1689779591/avljlnpfxqlkbkh9dldl.jpg"
         />
       </Head>
       <main className="app-main-con">

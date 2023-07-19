@@ -59,20 +59,20 @@ export default function MyApp({ Component, pageProps }) {
 
         <link rel="manifest" href="/manifest.json" />
         <link
-          href="https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg"
+          href="https://res.cloudinary.com/isreal/image/upload/v1689779591/avljlnpfxqlkbkh9dldl.jpg"
           rel="icon"
           type="image/png"
           sizes="16x16"
         />
         <link
-          href="https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg"
+          href="https://res.cloudinary.com/isreal/image/upload/v1689779591/avljlnpfxqlkbkh9dldl.jpg"
           rel="icon"
           type="image/png"
           sizes="32x32"
         />
         <link
           rel="apple-touch-icon"
-          href="https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg"
+          href="https://res.cloudinary.com/isreal/image/upload/v1689779591/avljlnpfxqlkbkh9dldl.jpg"
         ></link>
         <meta name="theme-color" content="white" />
       </Head>

@@ -1,16 +1,16 @@
 {
-  "name": "Jenny hair & wig",
-  "short_name": "Jenny hair & wig",
-  "description": "A progressive web app built with Next.js",
+  "name": "E-Resturant",
+  "short_name": "E-Resturant",
+  "description": "This app was built bu Justice Agbonma",
   "icons": [
     {
-      "src": "https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg",
+      "src": "https://res.cloudinary.com/isreal/image/upload/v1689779591/avljlnpfxqlkbkh9dldl.jpg",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://res.cloudinary.com/dnfa3ujys/image/upload/v1685984511/WhatsApp_Image_2023-06-05_at_3.43.15_PM_xrkz2v.jpg",
+      "src": "https://res.cloudinary.com/isreal/image/upload/v1689779591/avljlnpfxqlkbkh9dldl.jpg",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
