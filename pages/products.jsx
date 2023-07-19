@@ -14,7 +14,7 @@ function products() {
   const [displayedProducts, setDisplayedProducts] = useState([]);
   useEffect(() => {
     return onSnapshot(
-      query(collection(db, "products"), orderBy("timestamp", "desc")),
+      query(collection(db, "foodproducts"), orderBy("timestamp", "desc")),
       (snapshot) => {
         setDisplayedProducts(snapshot?.docs);
       }

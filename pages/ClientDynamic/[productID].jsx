@@ -85,7 +85,7 @@ function Details() {
   // fetch product by id
   const [product, setProduct] = useState();
   async function fetchItemFromFirestore() {
-    const itemRef = doc(db, "products", productID);
+    const itemRef = doc(db, "foodproducts", productID);
     const itemDoc = await getDoc(itemRef);
     if (itemDoc.exists()) {
       // Extract the data from the document and return it
@@ -116,7 +116,7 @@ function Details() {
   useEffect(() => {
     return onSnapshot(
       query(
-        collection(db, "products"),
+        collection(db, "foodproducts"),
         where("productcategory", "!=", `${product?.productcategory}`)
       ),
       (snapshot) => {
@@ -160,7 +160,7 @@ function Details() {
     () =>
       onSnapshot(
         query(
-          collection(db, "products", productID, "review"),
+          collection(db, "foodproducts", productID, "review"),
           orderBy("timestamp", "desc")
         ),
         (snapshot) => setReview(snapshot.docs)
@@ -366,7 +366,7 @@ function Details() {
                 )}
               </div>
             </div>
-            <div className="small-display-img-con">
+            {/* <div className="small-display-img-con">
               {product?.image.map(
                 (img, index) =>
                   img && (
@@ -383,7 +383,7 @@ function Details() {
                     </div>
                   )
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* lower part */}

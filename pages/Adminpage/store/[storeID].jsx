@@ -19,7 +19,7 @@ import { addDoc, serverTimestamp } from "firebase/firestore";
 import { getSessionUser } from "../../../Services/functions";
 
 export async function getStaticPaths() {
-  const colRef = collection(db, "products");
+  const colRef = collection(db, "foodproducts");
   const snapshot = await getDocs(colRef);
   const paths = snapshot.docs.map((doc) => ({
     params: { storeID: doc.id },
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({ params }) => {
   const { storeID } = params;
-  const productDoc = doc(db, "products", storeID);
+  const productDoc = doc(db, "foodproducts", storeID);
   const productSnapshot = await getDoc(productDoc);
   const productData = productSnapshot.data();
 
@@ -69,7 +69,7 @@ function StoreID() {
   // fetch product by id
   const [product, setProduct] = useState();
   async function fetchItemFromFirestore() {
-    const itemRef = doc(db, "products", storeID);
+    const itemRef = doc(db, "foodproducts", storeID);
     const itemDoc = await getDoc(itemRef);
     if (itemDoc.exists()) {
       // Extract the data from the document and return it
@@ -268,7 +268,7 @@ function StoreID() {
     };
 
     try {
-      const docRef = doc(db, "products", storeID);
+      const docRef = doc(db, "foodproducts", storeID);
       await updateDoc(docRef, { ...productDetails });
       alert("Product updated successfully!");
     } catch (error) {

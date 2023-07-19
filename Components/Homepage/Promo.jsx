@@ -11,7 +11,10 @@ function Promo() {
   const [promoProducts, setPromoProducts] = useState([]);
   useEffect(() => {
     return onSnapshot(
-      query(collection(db, "products"), where("productclass", "==", "promo")),
+      query(
+        collection(db, "foodproducts"),
+        where("productclass", "==", "promo")
+      ),
       (snapshot) => {
         setPromoProducts(snapshot.docs);
       }

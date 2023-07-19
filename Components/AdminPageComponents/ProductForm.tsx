@@ -27,12 +27,12 @@ function ProductForm() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-       formData.append("upload_preset", "ajis_store");
+      formData.append("upload_preset", "ajis_store");
 
-       const response = await axios.post(
-         `https://api.cloudinary.com/v1_1/isreal/image/upload`,
-         formData
-       );
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
+        formData
+      );
 
       return response.data.secure_url;
     } catch (error) {
@@ -61,12 +61,12 @@ function ProductForm() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-       formData.append("upload_preset", "ajis_store");
+      formData.append("upload_preset", "ajis_store");
 
-       const response = await axios.post(
-         `https://api.cloudinary.com/v1_1/isreal/image/upload`,
-         formData
-       );
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
+        formData
+      );
 
       return response.data.secure_url;
     } catch (error) {
@@ -95,12 +95,12 @@ function ProductForm() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-       formData.append("upload_preset", "ajis_store");
+      formData.append("upload_preset", "ajis_store");
 
-       const response = await axios.post(
-         `https://api.cloudinary.com/v1_1/isreal/image/upload`,
-         formData
-       );
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
+        formData
+      );
 
       return response.data.secure_url;
     } catch (error) {
@@ -129,12 +129,12 @@ function ProductForm() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-        formData.append("upload_preset", "ajis_store");
+      formData.append("upload_preset", "ajis_store");
 
-        const response = await axios.post(
-          `https://api.cloudinary.com/v1_1/isreal/image/upload`,
-          formData
-        );
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
+        formData
+      );
 
       return response.data.secure_url;
     } catch (error) {
@@ -278,9 +278,9 @@ function ProductForm() {
           <input
             type="text"
             placeholder="Enter Product Specs"
-            {...register("productnumber", { required: true })}
+            {...register("productnumber")}
           />
-          {errors.productnumber && (
+          {/* {errors.productnumber && (
             <span
               className="errror-msg"
               style={{
@@ -291,7 +291,7 @@ function ProductForm() {
             >
               Kindly Enter Product Specs
             </span>
-          )}
+          )} */}
           {/* PRODUCT CATEGORY */}
           <label>Product Category</label>
           <input

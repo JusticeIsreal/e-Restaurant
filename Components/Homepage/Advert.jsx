@@ -69,7 +69,7 @@ function Advert() {
         </Carousel.Slide>
         <Carousel.Slide>
           <div className="ad-img">
-            {advertImg?.length > 0 ? (
+            {advertImg?.length > 1 ? (
               <a href={"https://" + `${advertLink[0]}`} target="_blank">
                 <img
                   src={advertImg[0][1]}
@@ -90,7 +90,7 @@ function Advert() {
         </Carousel.Slide>
         <Carousel.Slide>
           <div className="ad-img">
-            {advertImg.length > 0 ? (
+            {advertImg.length > 2 ? (
               <a href={"https://" + `${advertLink[0]}`} target="_blank">
                 <img
                   src={advertImg[0][2]}
@@ -111,7 +111,7 @@ function Advert() {
         </Carousel.Slide>
         <Carousel.Slide>
           <div className="ad-img">
-            {advertImg.length > 0 ? (
+            {advertImg.length > 3 ? (
               <a href={"https://" + `${advertLink[0]}`} target="_blank">
                 <img
                   src={advertImg[0][3]}
