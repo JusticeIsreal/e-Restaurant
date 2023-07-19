@@ -489,7 +489,7 @@ function PayForm({
                 </div>
               )}
             </div>
-          )}{" "}
+          )}
           {/* PAYMENT FORM*/}
           <form
             onSubmit={handleSubmit(onSubmitBanner)}

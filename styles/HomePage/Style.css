@@ -970,13 +970,34 @@
   align-items: center;
   flex-direction: row;
 }
-.ad-con .ad-img img {
-  margin: 0 auto;
-  cursor: pointer;
-  height: 80px;
+.ad-con .ad-img a {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
+  .ad-con .ad-img a {
+    height: 100px;
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .ad-con .ad-img a {
+    height: 100px;
+    width: 30vw;
+  }
+}
+.ad-con .ad-img img {
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  height: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .ad-con .ad-img img {
+    height: 100px;
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 1023px) {
   .ad-con .ad-img img {
     height: 100px;
     width: 30vw;

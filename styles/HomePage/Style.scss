@@ -1001,15 +1001,30 @@ $txt-light-blue: #cfe8ff;
     @include flexDisplay(center, center, row);
     // border: 2px solid red;
     // height: 50px;
+    a {
+      width: 100%;
+      @include responsive(bigphone) {
+        height: 100px;
+        width: 50vw;
+      }
+      @include responsive(tablet) {
+        height: 100px;
+        width: 30vw;
+      }
+    }
     img {
-      // width: 100%;
+      width: 100%;
       margin: 0 auto;
       cursor: pointer;
-
       height: 80px;
-      width: 100%;
+      // border: 2px solid red;
 
       @include responsive(bigphone) {
+        height: 100px;
+        width: 50vw;
+      }
+
+      @include responsive(tablet) {
         height: 100px;
         width: 30vw;
       }
