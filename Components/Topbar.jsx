@@ -79,11 +79,11 @@ function Topbar({ dynamictriger, triga, localCartTriger, localCartLength }) {
             {/* <SiCoinmarketcap className="icon" /> */}
             <img
               className="icon-img"
-              src="https://res.cloudinary.com/dk3iqiy2e/image/upload/v1685825962/WhatsApp_Image_2023-05-30_at_12.36.37_AM-removebg-preview_kxnfud.png"
+              src="https://res.cloudinary.com/isreal/image/upload/v1689604698/WhatsApp_Image_2023-06-05_at_8.50.03_AM-removebg-preview_uoqp8m.png"
               alt="img"
             />
           </Link>
-          <p style={{ marginLeft: "5px", color: "#d8d520" }}>
+          <p style={{ marginLeft: "5px", color: "#ea9319" }}>
             {name && name.split(" ")[0]}
           </p>
         </div>

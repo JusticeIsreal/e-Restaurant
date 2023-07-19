@@ -122,8 +122,9 @@ $txt-light-blue: #cfe8ff;
     }
 
     .topbar-top-con-left {
+      // border: 1px solid red;
       @include flexDisplay(space-between, center, row);
-
+      z-index: 10;
       img {
         height: 50px;
       }
@@ -191,6 +192,7 @@ $txt-light-blue: #cfe8ff;
       padding-bottom: 0;
       position: relative;
       margin-right: auto;
+      margin-left: 150px;
       // height: 30px;
       width: auto;
       // margin-bottom: 0;
@@ -213,13 +215,14 @@ $txt-light-blue: #cfe8ff;
 
         @include responsive(bigphone) {
           height: 100%;
-          width: 500px;
+          // width: 500px;
           padding: 0;
           @include flexDisplay(center, center, row);
         }
         li {
           @include flexDisplay(space-between, center, column);
           padding: 0px 15px;
+          margin: 0 8px;
           height: 100%;
           font-size: 10px;
           color: $bg-dark;
@@ -1133,12 +1136,13 @@ $txt-light-blue: #cfe8ff;
       padding: 20px 10px;
       margin: 20px;
       width: 90%;
-      height: 320px;
+      height: 350px;
 
       @include responsive(bigphone) {
         @include flexDisplay(center, flex-start, column);
         margin: 20px;
         width: 350px;
+        height: 320px;
       }
       .img-con {
         width: 100%;
@@ -1158,11 +1162,12 @@ $txt-light-blue: #cfe8ff;
 
         .icon {
           color: $bg-gray;
-          background: $txt-blue;
+          background: rgb(230, 10, 10);
           width: 35px;
           height: 35px;
           padding: 5px;
           margin: 0 5px;
+          border-radius: 50px;
 
           &:hover {
             transform: translateY(-5px);
@@ -1201,7 +1206,9 @@ $txt-light-blue: #cfe8ff;
         .links {
           color: white;
           margin-bottom: 10px;
-
+          &:hover {
+            transform: translateY(-5px);
+          }
           a {
             color: white;
           }

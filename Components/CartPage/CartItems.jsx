@@ -94,9 +94,9 @@ function CartItems({ triger, setTriger }) {
       <p className="cart-heading">CART SUMMARY</p>
       <div className="subtotal">
         <p>Subtotal</p>
-        <h3> £ {totalAmount.toLocaleString()}</h3>
+        <h3>₦ {totalAmount.toLocaleString()}</h3>
         <div className="checkout" onClick={() => PayNow()}>
-          <button>CHECKOUT (£ {totalAmount.toLocaleString()})</button>
+          <button>CHECKOUT (₦ {totalAmount.toLocaleString()})</button>
         </div>
       </div>
 
@@ -114,7 +114,7 @@ function CartItems({ triger, setTriger }) {
           />
         ))}
         <div className="checkout" onClick={() => PayNow()}>
-          <button>CHECKOUT (£ {totalAmount.toLocaleString()})</button>
+          <button>CHECKOUT (₦ {totalAmount.toLocaleString()})</button>
         </div>
       </div>
     </>
@@ -215,7 +215,7 @@ function CartProducts({
         <div className="cart-product-lower">
           <div className="cart-product-lower-top">
             <h4>{productname}</h4>
-            <p>£ {priceNumber.toLocaleString()} </p>
+            <p>₦ {priceNumber.toLocaleString()} </p>
             <span>{productnumber}</span>
           </div>
           <div className="cart-product-lower-lower">

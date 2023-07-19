@@ -28,7 +28,7 @@ $font-light: #666;
 $bg-gray: #eee;
 $bg-dark-gray: #444;
 $bg-dark: #342e37;
-$txt-blue: #113261;
+$txt-blue: #ea9319;
 $txt-light-blue: #cfe8ff;
 
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
@@ -64,13 +64,14 @@ $txt-light-blue: #cfe8ff;
 
 // CLIENT SINGLE PRODUCT DYNAMIC PAGE STYLE
 .client-single-product {
-  // border: 2px solid red;
   width: 100vw;
   margin-top: 45px;
 
   .single-product {
     // border: 2px solid red;
     width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     @include flexDisplay(space-between, center, column);
 
     @include responsive(bigphone) {
@@ -78,12 +79,12 @@ $txt-light-blue: #cfe8ff;
     }
     @include responsive(tablet) {
       margin-top: 100px;
-      @include flexDisplay(flex-start, flex-start, row);
+      @include flexDisplay(space-evenly, center, row);
     }
 
     .top-container {
       width: 100%;
-
+      // border: 2px solid red;
       @include responsive(bigphone) {
         // border: 2px solid rgb(0, 26, 255);
         padding: 5px 0 0 10px;
@@ -104,6 +105,8 @@ $txt-light-blue: #cfe8ff;
         @include flexDisplay(flex-start, flex-start, column);
       }
       .big-display-con {
+        // border: 2px solid red;
+
         width: 100vw;
         max-width: 400px;
         margin: 0 auto;
@@ -127,8 +130,9 @@ $txt-light-blue: #cfe8ff;
         }
         @include responsive(desktop) {
           margin-top: 0;
+
           width: 400px;
-          height: 500px;
+          // height: 500px;
         }
         .go-back {
           position: absolute;
@@ -137,7 +141,7 @@ $txt-light-blue: #cfe8ff;
           position: fixed;
           top: 60px;
           left: 15px;
-          background: #113261;
+          background: $txt-blue;
           border: 1px solid #8080802b;
           color: white;
           width: 70px;
@@ -189,8 +193,10 @@ $txt-light-blue: #cfe8ff;
 
           .img {
             // border: 2px solid red;
-            // width: 100%;
+            width: 100%;
+
             height: 100%;
+            object-fit: contain;
           }
         }
       }
@@ -237,7 +243,7 @@ $txt-light-blue: #cfe8ff;
           @include responsive(bigphone) {
             @include flexDisplay(center, center, column);
             width: 100%;
-            height: 23%;
+            height: 100%;
           }
           @include responsive(desktop) {
             // @include flexDisplay(center, center, column);
@@ -251,7 +257,7 @@ $txt-light-blue: #cfe8ff;
           }
 
           img {
-            object-fit: cover;
+            object-fit: contain;
           }
         }
       }
@@ -404,10 +410,18 @@ $txt-light-blue: #cfe8ff;
         .add {
           border-top-left-radius: 20px;
           border-bottom-left-radius: 20px;
+          @include flexDisplay(center, center, row);
+          p {
+            padding: 0 5px;
+          }
         }
         .view {
           border-top-right-radius: 20px;
           border-bottom-right-radius: 20px;
+          @include flexDisplay(center, center, row);
+          p {
+            padding: 0 5px;
+          }
         }
       }
     }
@@ -415,12 +429,13 @@ $txt-light-blue: #cfe8ff;
 
   //   single product details style
   .single-product-details {
-    // border: 2px solid red;
     margin-top: 30px;
     padding: 5px;
-    width: 100vw;
     overflow: hidden;
     color: $bg-dark;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     @include flexDisplay(space-between, flex-start, column);
 
     // SINGLE PRODUCT REVIEW
@@ -637,24 +652,17 @@ $txt-light-blue: #cfe8ff;
       .products {
         @include flexDisplay(space-evenly, center, column);
         width: 170px;
+        height: 200px;
         padding: 5px;
         margin: 5px;
         border-radius: 5px;
         background: white;
         overflow: hidden;
 
-        // background: linear-gradient(15deg, #eee 40%, #fff 30.1%);
         border: 1px solid rgba(128, 128, 128, 0.261);
-        // border: 2px solid red;
-        // flex-wrap: wrap;
-        // height: 350px;
 
         @include responsive(bigphone) {
           width: 200px;
-        }
-
-        @include responsive(desktop) {
-          width: 350px;
         }
 
         .product-name {
@@ -667,12 +675,6 @@ $txt-light-blue: #cfe8ff;
           margin-top: 5px;
           width: 100%;
           // font-style: italic;
-          @include responsive(bigphone) {
-            font-size: 15px;
-          }
-          @include responsive(tablet) {
-            font-size: 18px;
-          }
         }
 
         .product-img {
@@ -683,11 +685,8 @@ $txt-light-blue: #cfe8ff;
           border-radius: 5px;
           display: flex;
           justify-content: center;
-          background: linear-gradient(15deg, #eee 40%, #fff 30.1%);
-          // @include flexDisplay(center, center, row);
-          // overflow: hidden;
           position: relative;
-          // border: 2px solid red;
+          // border: 2px solid rgb(255, 234, 0);
           .percentage-off {
             position: absolute;
             z-index: 20;
@@ -714,9 +713,10 @@ $txt-light-blue: #cfe8ff;
           }
 
           .home-product-img {
-            height: 100%;
+            // height: 100px !important;
             // border: 2px solid red;
             transition: transform 0.3s linear;
+            object-fit: contain;
           }
         }
 
@@ -725,21 +725,21 @@ $txt-light-blue: #cfe8ff;
           width: 100%;
           // border: 2px solid red;
           // height: 30px;
-          margin-top: 5px;
+          // margin-top: 5px;
           font-size: 15px;
 
           .product-price {
             // border: 2px solid red;
             text-align: center;
             // line-height: 1.5;
-            margin-top: 5px;
+            // margin-top: 5px;
             color: $bg-dark-gray;
           }
 
           .product-oldprice {
             text-align: center;
             line-height: 1.5;
-            margin-top: 5px;
+            // margin-top: 5px;
             font-size: 12px;
             color: $font-light;
             font-style: italic;
@@ -798,7 +798,7 @@ $txt-light-blue: #cfe8ff;
       // overflow: hidden;
       @include flexDisplay(center, center, column);
       box-shadow: -5px -10px 15px rgba(128, 128, 128, 0.625);
-      background: #fff5f5;
+      background: whitesmoke;
       border-radius: 5px;
       width: 90%;
       max-width: 500px;
@@ -810,7 +810,7 @@ $txt-light-blue: #cfe8ff;
         cursor: pointer;
         top: 5px;
         left: 5px;
-        background: #113261;
+        background: $txt-blue;
         border: 1px solid #8080802b;
         color: white;
         width: 70px;

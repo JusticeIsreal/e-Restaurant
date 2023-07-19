@@ -33,6 +33,8 @@ import { addToCart, getSessionUser } from "../../Services/functions";
 import Modal from "../../Components/Modal";
 import { CartQuantityContext } from "../_app";
 import Advantages from "../../Components/Advantages";
+import { FaCartArrowDown, FaMoneyCheckAlt } from "react-icons/fa";
+import { BiDish } from "react-icons/bi";
 
 export async function getStaticPaths() {
   const colRef = collection(db, "products");
@@ -115,7 +117,7 @@ function Details() {
     return onSnapshot(
       query(
         collection(db, "products"),
-        where("productcategory", "==", `${product?.productcategory}`)
+        where("productcategory", "!=", `${product?.productcategory}`)
       ),
       (snapshot) => {
         setSimilarProducts(
@@ -388,41 +390,29 @@ function Details() {
           <div className="lower-details">
             <h1 className="p-name">{product?.productname}</h1>
             <p className="p-number">
-              <span>Price :</span> £{" "}
-              {Number(product?.productprice).toLocaleString()}
-            </p>
-            <p className="p-number">
-              <span>Spec :</span> {product?.productnumber}
+              <span>Price :</span> ₦{" "}
+              {Number(product?.productprice).toLocaleString()}{" "}
+              <sub>
+                Per portion <BiDish className="menu-icon dish" />
+              </sub>
             </p>
             <div>
               <p className="p-desc">
                 <span>Category :</span> {product?.productcategory}
-              </p>
-              <p className="p-desc">
-                <span>Promo :</span>
-                {product?.productoldprice
-                  ? " YES :" +
-                    " " +
-                    "(old price" +
-                    " " +
-                    "~" +
-                    "£" +
-                    `${Number(product?.productoldprice).toLocaleString()})`
-                  : " NO"}
               </p>
             </div>
             <p className="p-desc">
               <span>Description : </span>
               {product?.productdescription}
             </p>
-            <p className="p-desc">
+            {/* <p className="p-desc">
               <span>Delivery poliy: </span>
-              maximum delivery period of 7 days within nigeria.
+              maximum delivery period of 2 hrs within LGA.
             </p>
             <p className="p-desc">
               <span>Return Policy : </span>
-              Product warrante lasts 48hrs after delievery notice.
-            </p>
+              Perishables returns l 20mins after delievery notice.
+            </p> */}
             {product?.videourl && (
               <div>
                 <iframe
@@ -463,18 +453,24 @@ function Details() {
                   <FiPlusCircle />
                 </span>
               </div>
-              <h1>£ {priceNumber.toLocaleString()}</h1>
+              <h1>₦ {priceNumber.toLocaleString()}</h1>
             </div>
             <div className="add-to-cart-con">
-              <div className="add" onClick={() => addToCar()}>
-                Add to cart
-              </div>
-              <div className="buy" onClick={() => PayNow()}>
-                Buy Now
-              </div>
-              <Link href="/cart" className="view">
+              {count > 0 && (
+                <>
+                  <div className="add" onClick={() => addToCar()}>
+                    <p>Add to Tray</p> <FaCartArrowDown />
+                  </div>
+
+                  <div className="view" onClick={() => PayNow()}>
+                    <p>Buy Now</p> <FaMoneyCheckAlt />
+                  </div>
+                </>
+              )}
+
+              {/* <Link href="/cart" className="view">
                 <div>View Cart</div>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -492,7 +488,10 @@ function Details() {
                   <span>{!showForm ? "Add Review" : "Close form"}</span>
                 </div>
               ) : (
-                <span>(Only registered users can make reviews)</span>
+                <span>
+                  (Only registered users can make reviews){" "}
+                  <Link href="/loginpage">Click here</Link>
+                </span>
               )}
 
               {/* REVIEW FORM */}
@@ -598,7 +597,7 @@ function Details() {
           {/* similar products */}
           <>
             <h3 style={{ marginTop: "100px", color: "#113261" }}>
-              {similarProducts.length > 0 && "SIMILAR PRODUCTS"}
+              {similarProducts.length > 0 && "You can add"}
             </h3>{" "}
             <div className="similar-products">
               <div className="single-product-con">
@@ -670,7 +669,7 @@ function SimilarProducts({
       <p className="product-name">{productname}</p>
       <div className="price">
         <p className="product-price">
-          £ {Number(productprice).toLocaleString()}
+          ₦ {Number(productprice).toLocaleString()}
         </p>
         <p className="product-oldprice">
           {" "}

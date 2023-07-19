@@ -33,21 +33,21 @@ function PayForm({
   const [converiontAmount, setConvertionAmount] = useState(1);
   const testing = useRef();
   const selectedCurrency = (e) => {
-    let data = e.target?.value;
-    // console.log(data);
-    if (data === "usd") {
-      setCurrencySign("$");
-      return setConvertionAmount(payCurrency?.dolarexchange);
-    } else if (data === "eur") {
-      setCurrencySign("€");
-      return setConvertionAmount(payCurrency?.euroexchange);
-    } else if (data === "ngn") {
-      setCurrencySign("₦");
-      return setConvertionAmount(payCurrency?.nairaexchange);
-    } else {
-      setCurrencySign("£");
-      return setConvertionAmount(1);
-    }
+    // let data = e.target?.value;
+    // // console.log(data);
+    // if (data === "usd") {
+    //   setCurrencySign("$");
+    //   return setConvertionAmount(payCurrency?.dolarexchange);
+    // } else if (data === "eur") {
+    //   setCurrencySign("€");
+    //   return setConvertionAmount(payCurrency?.euroexchange);
+    // } else if (data === "ngn") {
+    //   setCurrencySign("₦");
+    //   return setConvertionAmount(payCurrency?.nairaexchange);
+    // } else {
+    //   setCurrencySign("₦");
+    //   return setConvertionAmount(1);
+    // }
   };
   // console.log(converiontAmount);
   // login
@@ -73,8 +73,8 @@ function PayForm({
   // get user session
   const [getUserSessiond, setGetUserSessiond] = useState(false);
   const [payCurrency, setpayCurrency] = useState();
+
   useEffect(() => {
-    // console.log(productsArray);
     const getSession = async () => {
       if (getUserSession || sessionUser) {
         setGetUserSessiond(true);
@@ -237,14 +237,13 @@ function PayForm({
           },
         }
       )
-      .then((res) => {
-        const transactionID = {
-          transactID: res?.data?.data?.paymentIntent?.id,
-          transactionID: res?.data?.data?.Transaction?._id,
+      .then((resp) => {
+        const refID = {
+          userData: resp.data.data.Transaction,
+          transactID: resp.data.data.Transaction._id,
         };
-        // console.log(res.data.data.url);
-        localStorage.setItem("transactID", JSON.stringify(transactionID));
-        router.push(`${res.data.data.url}`);
+        localStorage.setItem("refID", JSON.stringify(refID));
+        window.location.href = resp.data.data.authorization_url;
       })
       .catch((err) => {
         console.log(err);
@@ -255,7 +254,7 @@ function PayForm({
 
   const cancelTransaction = async () => {
     setBtnStatus(false);
-    router.push("/");
+    router.reload();
   };
   // console.log(productData);
   return (
@@ -587,9 +586,42 @@ function PayForm({
             <div>
               <select {...register("state", { required: true })}>
                 <option value="">Location</option>
-                <option value="Within UK,0">Within UK</option>
-                <option value="Outside UK,20">Outside UK</option>
-                <option value="Africa,20">Africa</option>
+                <option value="Abuja,3500">Abuja</option>
+                <option value="Abia,2500">Abia</option>
+                <option value="Adamawa,3500">Adamawa</option>
+                <option value="AkwaIbom,2500">Akwa Ibom</option>
+                <option value="Anambra,2500">Anambra</option>
+                <option value="Bauchi,3500">Bauchi</option>
+                <option value="Bayelsa,2500">Bayelsa</option>
+                <option value="Benue,3500">Benue</option>
+                <option value="Borno,3500">Borno</option>
+                <option value="CrossRiver,2500">Cross River</option>
+                <option value="Delta,2500">Delta</option>
+                <option value="Ebonyi,2500">Ebonyi</option>
+                <option value="Edo,0">Edo</option>
+                <option value="Ekiti,2500">Ekiti</option>
+                <option value="Enugu,2500">Enugu</option>
+                <option value="Gombe,3500">Gombe</option>
+                <option value="Imo,2500">Imo</option>
+                <option value="Jigawa,3500">Jigawa</option>
+                <option value="Kaduna,3500">Kaduna</option>
+                <option value="Kano,3500">Kano</option>
+                <option value="Katsina,3500">Katsina</option>
+                <option value="Kebbi,3500">Kebbi</option>
+                <option value="Kogi,3500">Kogi</option>
+                <option value="Kwara,2500">Kwara</option>
+                <option value="Lagos,2500">Lagos</option>
+                <option value="Niger,3500">Niger</option>
+                <option value="Ogun,2500">Ogun</option>
+                <option value="Ondo,2500">Ondo</option>
+                <option value="Osun,2500">Osun</option>
+                <option value="Oyo,2500">Oyo</option>
+                <option value="Plateau,3500">Plateau</option>
+                <option value="Sokoto,3500">Sokoto</option>
+                <option value="River,2500">River</option>
+                <option value="Taraba,3500">Taraba</option>
+                <option value="Yobe,3500">Yobe</option>
+                <option value="Zamfara,3500">Zamfara</option>
               </select>
               {errors.state && (
                 <span
@@ -608,8 +640,8 @@ function PayForm({
             <div>
               <select {...register("homedelivery", { required: true })}>
                 <option value="">Delivery</option>
-                <option value="12">Special delivery £12 (1 day)</option>
-                <option value="5">Normal delivery £5 (2 - 3 days)</option>
+                <option value="1500">Home delivery(N 1500)</option>
+                <option value="0">Pick up (No fee)</option>
               </select>
               {errors.homedelivery && (
                 <span
@@ -625,7 +657,7 @@ function PayForm({
               )}
             </div>
             {/* STATE */}
-            <div>
+            {/* <div>
               <select
                 {...register("currency", { required: true })}
                 onChange={(e) => selectedCurrency(e)}
@@ -649,7 +681,7 @@ function PayForm({
                   Kindly Enter preferred currency
                 </span>
               )}
-            </div>
+            </div> */}
             <div>
               <textarea
                 // type="text"

@@ -39,7 +39,7 @@ const Homepage = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     return onSnapshot(
-      query(collection(db, "products"), orderBy("timestamp", "desc")),
+      query(collection(db, "foodproducts"), orderBy("timestamp", "desc")),
       (snapshot) => {
         setProducts(snapshot.docs);
       }

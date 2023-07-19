@@ -118,7 +118,7 @@ function TransactionReceipt({
       setCurrencySign("₦");
       return;
     } else {
-      setCurrencySign("£");
+      setCurrencySign("₦");
       return;
     }
   }, []);

@@ -133,7 +133,7 @@ function StoreItemsIndividual({
         </td>
         <td style={{ width: "10%", margin: "5px" }}>{productnumber}</td>
         <td style={{ width: "10%", margin: "5px" }}>
-          £ {Number(productprice).toLocaleString()}
+          ₦ {Number(productprice).toLocaleString()}
         </td>
         <td style={{ width: "10%", margin: "5px" }}>{productcategory}</td>
         <td style={{ width: "10%", margin: "5px" }}>{productclass}</td>

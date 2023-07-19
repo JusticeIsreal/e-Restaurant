@@ -27,12 +27,12 @@ function AdvertForm({ advertDetails }) {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "jusmin");
+       formData.append("upload_preset", "ajis_store");
 
-      const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/djtneu2rh/image/upload`,
-        formData
-      );
+       const response = await axios.post(
+         `https://api.cloudinary.com/v1_1/isreal/image/upload`,
+         formData
+       );
 
       return response.data.secure_url;
     } catch (error) {
@@ -61,10 +61,10 @@ function AdvertForm({ advertDetails }) {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "jusmin");
+      formData.append("upload_preset", "ajis_store");
 
       const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/djtneu2rh/image/upload`,
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
         formData
       );
 
@@ -95,10 +95,10 @@ function AdvertForm({ advertDetails }) {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "jusmin");
+      formData.append("upload_preset", "ajis_store");
 
       const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/djtneu2rh/image/upload`,
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
         formData
       );
 
@@ -129,10 +129,10 @@ function AdvertForm({ advertDetails }) {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "jusmin");
+      formData.append("upload_preset", "ajis_store");
 
       const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/djtneu2rh/image/upload`,
+        `https://api.cloudinary.com/v1_1/isreal/image/upload`,
         formData
       );
 

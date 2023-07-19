@@ -18,7 +18,7 @@ const NewArrivals: React.ReactNode = () => {
   useEffect(() => {
     return onSnapshot(
       query(
-        collection(db, "products"),
+        collection(db, "foodproducts"),
         where("productclass", "==", "trending")
       ),
       (snapshot) => {

@@ -4,13 +4,11 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
-
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: "jniskincare.firebaseapp.com",
-  projectId: "jniskincare",
-  storageBucket: "jniskincare.appspot.com",
-  messagingSenderId: "2041239260",
+  authDomain: "e-commerce-storage-59d2f.firebaseapp.com",
+  projectId: "e-commerce-storage-59d2f",
+  storageBucket: "e-commerce-storage-59d2f.appspot.com",
   messagingSenderId: process.env.FIREBASE_MESSAGIN_ID,
   appId: process.env.FIREBASE_APP_ID,
 };

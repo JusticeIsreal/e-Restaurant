@@ -103,7 +103,7 @@ function Product({
 
       <div className="price">
         <p className="product-price">
-          £ {Number(productprice).toLocaleString()}
+          ₦ {Number(productprice).toLocaleString()}
         </p>
         <p className="product-oldprice" onClick={(e) => addToCar(e, id)}>
           <FaCartArrowDown className="icon" />

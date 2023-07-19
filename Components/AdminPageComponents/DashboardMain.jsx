@@ -181,7 +181,7 @@ function RecentTransactions({
       setCurrencySign("₦");
       return;
     } else {
-      setCurrencySign("£");
+      setCurrencySign("₦");
       return;
     }
   }, []);
