@@ -68,7 +68,7 @@ const Homepage = () => {
       : [];
 
     e.target.innerHTML = "Loading ...";
-    const productDoc = doc(db, "products", id);
+    const productDoc = doc(db, "foodproducts", id);
     const productSnapshot = await getDoc(productDoc);
     const productData = productSnapshot.data();
     const userSession = await getSessionUser();

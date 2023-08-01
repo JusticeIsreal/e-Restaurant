@@ -235,7 +235,7 @@ function Details() {
       ? JSON.parse(localStorage.getItem("localCartItem"))
       : [];
     setDynamicTriger(!dynamictriger);
-    const productDoc = doc(db, "products", productID);
+    const productDoc = doc(db, "foodproducts", productID);
     const productSnapshot = await getDoc(productDoc);
     const productData = productSnapshot.data();
     setDynamicTriger(!dynamictriger);
