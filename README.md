@@ -1,4 +1,4 @@
-# [Your Food Store] - Your One-Stop Shop for Delicious Food
+# Your One-Stop Shop for Delicious Food
 
 ![Food Store](public/readMe.png)
 [https://e-restaurant-app.vercel.app/products](https://e-restaurant-app.vercel.app/products)
